@@ -1,0 +1,115 @@
+:root {
+  --sky-blue: #81d8d0;
+  --light-blue: #cceeff;
+  --light-yellow: #ffff66;
+  --pink: #ff00b4;
+  --deep-blue: #00abc5;
+  --deep-purple: #5e2a84;
+  --light-purple: #dab6ff;
+  --night-purple: #2e003e;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, var(--deep-purple), var(--night-purple), #000);
+  font-family: 'Cinzel', serif;
+  color: var(--light-yellow);
+  text-align: center;
+}
+
+/* Star background */
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: url('stars.png') repeat;
+  animation: twinkle 5s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes twinkle {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+/* Hero Section */
+.hero-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+canvas#stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.asha-image {
+  position: absolute;
+  z-index: 1;
+  width: 300px;
+  max-width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.glow-star {
+  position: absolute;
+  z-index: 2;
+  width: 30px;
+  height: 70px;
+  background: radial-gradient(var(--light-yellow), transparent);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  top: 45%;
+  left: 52%;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.3); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.7; }
+}
+
+/* Title & Button */
+h1 {
+  color: var(--sky-blue);
+  text-shadow: 2px 2px var(--pink);
+}
+
+.wish-button {
+  background-color: var(--pink);
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.wish-button:hover {
+  background-color: var(--light-yellow);
+  color: black;
+  box-shadow: 0 0 15px var(--light-yellow);
+}
+
+.asha-image{
+    position: absolute;
+    top: 70%;
+    left:50%;
+    transform: translate(-50%, -50%);
+
+    width: 100vh;
+   
+    object-fit: cover;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
