@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magnifico's Vault</title>
+    
+    <!-- css -->
+     <link rel="stylesheet" href="cs/main.css">
+    <link rel="stylesheet" href="cs/accessibility.cs">
+
+</head>
+<body>
+
+      <header>
+
+   
+       <div id="switches" aria-label="color mode changers">
+          <button id="lightSwitch" aria-pressed="false" type="button" onclick="switchLight()">Light</button><button id="darkSwitch" aria-pressed="false" type="button" onclick="switchDark()">Dark</button><button id="autoSwitch" aria-pressed="true" type="button" onclick="switchAuto()">Auto</button>
+        <div class="hue-slider">
+          <label for="hueSlider">Hue&ThinSpace;</label><input id="hueSlider" type="range" min="0" max="360" value="222">
+        </div><button id="monoSwitch" aria-pressed="false" type="button" onclick="toggleMono()">Mono</button>
+      </div>
+  </header>
+  <!-- Star 
+    <h1>Wishes Made</h1>
+    <div id="wishes-list">
+        <!-- Wishes will appear here -->
+    </div>
+  
+</body>
+</html>
